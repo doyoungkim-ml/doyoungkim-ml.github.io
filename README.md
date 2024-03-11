@@ -1,1 +1,1 @@
-This is forked from https://seominjoon.github.io/
+This website is forked from https://seominjoon.github.io/.
