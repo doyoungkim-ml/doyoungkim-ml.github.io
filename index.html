@@ -49,7 +49,7 @@
         <table style="padding-bottom:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Selected Publications</heading>
+              <heading>Publications</heading>
 
               <p>
                 Please see my <a href="https://www.semanticscholar.org/author/Doyoung-Kim/2180527259" target="_blank">Semantic Scholar</a> or
@@ -194,6 +194,123 @@
 
         </tr> 
 
+        <!-- Modified divider with only clickable text -->
+        <tr>
+          <td colspan="2" style="text-align: center; padding: 20px;">
+            <div style="position: relative; padding: 10px 0;">
+              <hr style="border: none; border-top: 1px solid #ddd; margin: 0;">
+              <span onclick="toggleOlderPubs()" 
+                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+                           background-color: white; padding: 0 15px; color: #888; font-size: 14px;
+                           cursor: pointer;">
+                Show All Publications
+              </span>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="olderPubs" style="display: none;">
+          <td colspan="2">
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;">
+              <!-- Add your older publications here following the same format -->
+              <tr>
+                <td style="padding:10px;width:30%;vertical-align:top">
+                  <div class="one">
+                    <img src='images/truly_ground.png' style="width:130%;height: 65%;">
+                  </div>
+                </td>
+                <td style="padding:10px;width:70%;vertical-align:top">
+                  <papertitle>How Well Do Large Language Models Truly Ground?</papertitle>
+                  <br>
+                  <a href="https://amy-hyunji.github.io/" target="_blank">Hyunji Lee</a>, 
+                  <a href="https://scholar.google.com/citations?user=xii168wAAAAJ" target="_blank">Sejune Joo</a>, 
+                  <a href="https://www.linkedin.com/in/chaeeun-kim-a68025251/?originalSubdomain=kr" target="_blank">Chaeeun Kim</a>, 
+                  <strong>Doyoung Kim</strong>, 
+                  <a href="https://scholar.google.com/citations?user=feMRfHUAAAAJ" target="_blank">Kyoung-Woon On</a>, 
+                  <a href="https://seominjoon.github.io/" target="_blank">Minjoon Seo</a>
+                  <br>
+                  <em>NAACL 2024</em>
+                  <br>
+                  <a href="https://arxiv.org/abs/2311.09069" target="_blank">[paper]</a>
+                  <p></p>
+                </td>
+              </tr>
+              <tr></tr>
+                <td style="padding:10px;width:30%;vertical-align:top">
+                  <div class="one">
+                    <img src='images/moe.png' style="width:130%;height: 65%;">
+                  </div>
+                </td>
+                <td style="padding:10px;width:70%;vertical-align:top">
+                  <papertitle>Exploring the Benefits of Training Expert Language Models over Instruction Tuning</papertitle>
+                  <br>
+                  <a href="https://joeljang.github.io/" target="_blank">Joel Jang</a>, 
+                  <a href="https://seungonekim.github.io/" target="_blank">Seungone Kim</a>, 
+                  <a href="https://seonghyeonye.github.io/" target="_blank">Seonghyeon Ye</a>, 
+                  <strong>Doyoung Kim</strong>, 
+                  <a href="https://scholar.google.com/citations?user=dcv4kpIAAAAJ" target="_blank">Lajanugen Logeswaran</a>, 
+                  <a href="https://www.linkedin.com/in/moontae-lee-975248123/" target="_blank">Mootae Lee</a>, 
+                  <a href="https://scholar.google.com/citations?user=bGeInhoAAAAJ
+                  " target="_blank">Kyungjae Lee</a>, 
+                  <a href="https://seominjoon.github.io/" target="_blank">Minjoon Seo</a>
+                  <br>
+                  <em>ICML 2023</em>
+                  <br>
+                  <a href="https://arxiv.org/abs/2302.03202" target="_blank">[paper]</a>
+                  <p></p>
+                </td>
+              </tr>
+
+
+              <tr></tr>
+              <td style="padding:10px;width:30%;vertical-align:top">
+                <div class="one">
+                  <img src='images/flipped.png' style="width:130%;height: 65%;">
+                </div>
+              </td>
+              <td style="padding:10px;width:70%;vertical-align:top">
+                <papertitle>Guess the Instruction! Flipped Learning Makes Language Models Stronger Zero-Shot Learners</papertitle>
+                <br>
+                <a href="https://seonghyeonye.github.io/" target="_blank">Seonghyeon Ye</a>, 
+                <strong>Doyoung Kim</strong>, 
+                <a href="https://joeljang.github.io/" target="_blank">Joel Jang</a>, 
+                <a href="https://joongbo.github.io/" target="_blank">Joongbo Shin</a>, 
+                <a href="https://seominjoon.github.io/" target="_blank">Minjoon Seo</a>
+                <br>
+                <em>ICLR 2023</em>
+                <br>
+                <a href="https://arxiv.org/abs/2210.02969" target="_blank">[paper]</a>
+                <p></p>
+              </td>
+            </tr>
+
+
+
+            <tr></tr>
+            <td style="padding:10px;width:30%;vertical-align:top">
+              <div class="one">
+                <img src='images/rospr.png' style="width:130%;height: 65%;">
+              </div>
+            </td>
+            <td style="padding:10px;width:70%;vertical-align:top">
+              <papertitle>Retrieval of Soft Prompt Enhances Zero-Shot Task Generalization</papertitle>
+              <br>
+              <a href="https://seonghyeonye.github.io/" target="_blank">Seonghyeon Ye</a>, 
+              <a href="https://joeljang.github.io/" target="_blank">Joel Jang</a>, 
+              <strong>Doyoung Kim</strong>, 
+              <a href="https://dreamgonfly.github.io/" target="_blank">Yongrae Jo</a>, 
+              <a href="https://seominjoon.github.io/" target="_blank">Minjoon Seo</a>
+              <br>
+              <em>EMNLP 2023 Findings</em>
+              <br>
+              <a href="https://openreview.net/forum?id=UFtd8aGZCP" target="_blank">[paper]</a>
+              <p></p>
+            </td>
+          </tr>
+
+            </table>
+          </td>
+        </tr>
 
         </table>
       

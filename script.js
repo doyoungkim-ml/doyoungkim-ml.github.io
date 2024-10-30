@@ -295,3 +295,14 @@ function updateGameArea() {
     }
 }
 
+function toggleOlderPubs() {
+	const olderPubs = document.getElementById('olderPubs');
+	const button = event.target;
+	if (olderPubs.style.display === 'none') {
+	  olderPubs.style.display = 'table-row';
+	  button.textContent = 'Hide All Publications';
+	} else {
+	  olderPubs.style.display = 'none';
+	  button.textContent = 'Show All Publications';
+	}
+  } 
