@@ -1,19 +1,257 @@
----
-layout: default
----
-<div>
-  {% include_relative intro.html %}
-</div>
-<hr>
-<div>
-  {% include_relative news.html %}
-</div>
-<hr>
-<div>
-  {% include_relative publications.html %}
-</div>
-<div>
-  {% include_relative projects.html %}
-</div>
-<hr>
+<!DOCTYPE HTML>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
+  <title>Doyoung Kim <small>(김도영)</small></title>
+  
+  <meta name="author" content="Doyoung Kim">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link rel="icon" href="favicon.ico">
+  <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body onload="startGame()">
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <tr style="padding:0px">
+      <td style="padding:0px">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr style="padding:0px">
+            <td style="padding:2.5%;width:63%;vertical-align:middle">
+              <p style="text-align:center">
+                <name>Doyoung Kim <small>(김도영)</small></name>
+              </p>
+              <p>
+                I am an MS student studying AI. I am a member of Language & Knowledge Lab at <a href="http://gsai.kaist.ac.kr/">KAIST AI</a>, advised by <a href="https://seominjoon.github.io/">Minjoon Seo</a>. Before studying AI, I completed my BS in Mathematics & Computer Science (double major) at KAIST.
+              </p>
+              <p>
+                Despite the massive corpus of data on which modern AI systems are trained, they still struggle with tasks that humans, even young children, can easily perform. I believe that by incorporating key aspects of human cognitive processes, we can create AI systems capable of robust decision-making. My research focuses on narrowing the gap between human and artificial intelligence in complex scenarios. Specifically, I aim to tackle two key challenges:
+                <ul>
+                    <li><b>Extrapolability:</b> Humans effortlessly generalize knowledge from simple scenarios to navigate complex situations. How can we develop AI agents that, after learning from a few simple demonstrations, can extrapolate to more complex scenarios?</li>
+                    <li><b>Semiparametric generation:</b> Unlike purely parametric systems, humans rely on both learned patterns and direct interactions with memory, tools, and the physical world. Can we design AI systems that similarly combine internal models with external information sources in a cohesive semiparametric framework?</li>
+                </ul>
+              </p>
+              <p style="text-align:center">
+                <a href="mailto:doyoungkim@kaist.ac.kr">Email</a> &nbsp/&nbsp
+                <a href="https://scholar.google.com/citations?user=PJR9ogMAAAAJ" target="_blank">Google Scholar</a> &nbsp/&nbsp
+                <a href="https://x.com/doyoungkim_ml" target="_blank">X</a> &nbsp/&nbsp
+                <a href="https://github.com/doyoungkim-ml" target="_blank">Github</a> &nbsp/&nbsp
+                <a href="https://www.linkedin.com/in/doyoung-kim-870a141a2/" target="_blank">LinkedIn</a> &nbsp/&nbsp
+                <a href="files/cv.pdf" target="_blank">CV</a>
+              </p>
+            </td>
+            <td style="padding:2.5%;width:40%;max-width:40%">
+              <a href="images/profile.jpg" target="_blank"><img style="width:100%;max-width:100%;border-radius:50%;object-fit:cover;aspect-ratio:1/1;" alt="profile photo" src="images/profile.jpg"></a>
+            </td>
+          </tr>
+        </tbody></table>
+        
+        <table style="padding-bottom:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <heading>Selected Publications</heading>
+
+              <p>
+                Please see my <a href="https://www.semanticscholar.org/author/Doyoung-Kim/2180527259" target="_blank">Semantic Scholar</a> or
+                    <a href="https://scholar.google.com/citations?user=PJR9ogMAAAAJ" target="_blank">Google Scholar</a> profiles for the full list.
+                </p>
+                <i>* denotes equal contribution.</i>
+            </td>
+
+          </tr>
+        </tbody></table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          
+          <tr>
+            <td style="padding:10px;width:30%;vertical-align:top">
+              <div class="one">
+                <img src='images/cognitive_map.png' style="width:130%;height: 65%;">
+              </div>
+            </td>
+
+            <td style="padding:10px;width:70%;vertical-align:top">
+              <papertitle>How language models extrapolate outside the training data: A case study in Textualized Gridworld</papertitle>
+              <br>
+              <strong>Doyoung Kim</strong>, 
+              <a href="https://www.linkedin.com/in/jongwon-jay-lee/" target="_blank">Jongwon Lee</a>, 
+              <a href="https://www.linkedin.com/in/%EC%A7%84%ED%98%B8-%EB%B0%95-48baba237/?originalSubdomain=kr" target="_blank">Jinho Park</a>, 
+              <a href="https://seominjoon.github.io/" target="_blank">Minjoon Seo</a>
+              <br>
+              <em>Neurips 2024 Compositional Learning Workshop</em>
+              <br>
+							<a href="https://arxiv.org/abs/2406.15275" target="_blank">[paper]</a>
+              <p></p>
+              <p> While humans can learn complex reasoning from few examples, AI struggles to generalize beyond its training. We construct "cognitive map" for language models, and case study in maze-solving tasks shows that cognitive maps are the only effective method enabling language models to extrapolate their learned planning ability to bigger, unseen mazes.
+              </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding:10px;width:30%;vertical-align:top">
+              <div class="one">
+                <img src='images/self_explore.png' style="width:130%;height: 65%;">
+              </div>
+            </td>
+
+            <td style="padding:10px;width:70%;vertical-align:top">
+              <papertitle>Self-Explore: Enhancing Mathematical Reasoning in Language Models with Fine-grained Rewards</papertitle>
+              <br>
+              <a href="https://hbin0701.github.io/" target="_blank">Hyeonbin Hwang</a>, 
+              <strong>Doyoung Kim</strong>, 
+              <a href="https://seungonekim.github.io/" target="_blank">Seungone Kim</a>, 
+              <a href="https://seonghyeonye.github.io/" target="_blank">Seonghyeon Ye</a>, 
+              <a href="https://seominjoon.github.io/" target="_blank">Minjoon Seo</a>
+              <br>
+              <em>EMNLP 2024 Findings</em>
+              <br>
+							<a href="https://arxiv.org/abs/2404.10346" target="_blank">[paper]</a>
+              <p></p>
+              <p> We propose a self-training method that helps LLMs identify their first incorrect reasoning step ("pit") and use it as a reward signal. Through preference optimization, this method enables LLMs to improve their reasoning process, leading to enhanced mathematical performance.
+              </p>
+            </td>
+          </tr>
+
+          <tr></tr>
+            <td style="padding:10px;width:30%;vertical-align:top">
+              <div class="one">
+                <img src='images/semiparametric.png' style="width:130%;height: 65%;">
+              </div>
+            </td>
+
+            <td style="padding:10px;width:70%;vertical-align:top">
+              <papertitle>Semiparametric Token-Sequence Co-Supervision</papertitle>
+              <br>
+              <a href="https://amy-hyunji.github.io/" target="_blank">Hyunji Lee*</a>, 
+              <strong>Doyoung Kim*</strong>, 
+              <a href="https://www.linkedin.com/in/jihoon-jun-9a3176184/?originalSubdomain=kr" target="_blank">Jihoon Jun</a>, 
+              <a href="https://scholar.google.com/citations?user=xii168wAAAAJ" target="_blank">Sejune Joo</a>, 
+              <a href="https://joeljang.github.io/" target="_blank">Joel Jang</a>, 
+              <a href="https://scholar.google.com/citations?user=feMRfHUAAAAJ" target="_blank">Kyoung-Woon On</a>, 
+              <a href="https://seominjoon.github.io/" target="_blank">Minjoon Seo</a>
+              <br>
+              <em>ACL 2024</em>
+              <br>
+							<a href="https://arxiv.org/abs/2403.09024" target="_blank">[paper]</a>
+              <p></p>
+              <p> We introduce a semiparametric model superposing two embedding spaces: parametric token embeddings and nonparametric sequence embeddings. The model is co-trained using weighted cross-entropy loss for language modeling and InfoNCE loss for sequence retrieval to enable generation with citations.
+              </p>
+            </td>
+          </tr>
+
+          <tr></tr>
+            <td style="padding:10px;width:30%;vertical-align:top">
+              <div class="one">
+                <img src='images/flask.png' style="width:130%;height: 65%;">
+              </div>
+            </td>
+            <td style="padding:10px;width:70%;vertical-align:top">
+              <papertitle>FLASK: Fine-grained Language Model Evaluation based on Alignment Skill Sets</papertitle>
+              <br>
+              <a href="https://seonghyeonye.github.io/" target="_blank">Seonghyeon Ye*</a>, 
+              <strong>Doyoung Kim*</strong>, 
+              <a href="https://sungdongkim.github.io/" target="_blank">Sungdong Kim</a>, 
+              <a href="https://hbin0701.github.io/" target="_blank">Hyeonbin Hwang</a>, 
+              <a href="https://seungonekim.github.io/" target="_blank">Seungone Kim</a>, 
+              <a href="https://jamesthorne.com/" target="_blank">James Thorne</a>, 
+              <a href="https://juhokim.com/" target="_blank">Juho Kim</a>, 
+              <a href="https://seominjoon.github.io/" target="_blank">Minjoon Seo</a>
+              <br>
+              <em>ICLR 2024 <span style="color: #ff9900"><strong>Spotlight</strong></span></em>
+              <br>
+							<a href="https://arxiv.org/abs/2307.10928" target="_blank">[paper]</a>
+              <p></p>
+              <p>
+                We propose a fine-grained evaluation framework for generative language models based on 12 alignment skill sets, which show a strong correlation between model-based and human-based evaluations.
+              </p>
+            </td>
+          <tr></tr>
+          <td style="padding:10px;width:30%;vertical-align:top">
+            <div class="one">
+              <img src='images/cot_collection.png' style="width:130%;height: 65%;">
+            </div>
+          </td>
+
+          <td style="padding:10px;width:70%;vertical-align:top">
+            <papertitle>The CoT Collection: Improving Zero-shot and Few-shot Learning of Language Models via Chain-of-Thought Fine-Tuning</papertitle>
+            <br>
+            <a href="https://seungonekim.github.io/" target="_blank">Seungone Kim</a>, 
+            <a href="https://scholar.google.com/citations?user=xii168wAAAAJ" target="_blank">Sejune Joo</a>, 
+            <strong>Doyoung Kim</strong>, 
+            <a href="https://joeljang.github.io/" target="_blank">Joel Jang</a>, 
+            <a href="https://seonghyeonye.github.io/" target="_blank">Seonghyeon Ye</a>, 
+            <a href="https://scholar.google.com/citations?user=GuBHIwsAAAAJ" target="_blank">Jamin Shin</a>, 
+            <a href="https://seominjoon.github.io/" target="_blank">Minjoon Seo</a>
+            <br>
+            <em>EMNLP 2023</em>
+            <br>
+							<a href="https://arxiv.org/abs/2305.14045" target="_blank">[paper]</a>
+              <p></p>
+              <p>
+                We introduce a new instruction-tuning dataset called the COT COLLECTION dataset, containing 1.84 million rationales across 1,060 tasks. These rationales were extracted from the FLAN Collection using OpenAI Codex with in-context learning (ICL). We fine-tune Flan-T5 (3B & 11B) with the COT COLLECTION to show both zero-shot and few-shot improvements.
+              </p>
+          </td>
+
+        </tr> 
+
+
+        </table>
+      
+      <table style="padding-top:20px;padding-bottom: 20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <heading>Projects</heading>
+
+              <p>
+                </p>
+                <i>* denotes equal contribution.</i>
+            </td>
+                
+
+
+        </tr>
+
+      </tbody></table>
+
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <tr></tr>
+        <td style="padding:10px;width:30%;vertical-align:top">
+          <div class="one">
+            <video autoplay loop muted playsinline style="width:130%;height: 65%;">
+              <source src="images/selfee_final_revised.mp4" type="video/mp4">
+            </video>
+          </div>
+        </td>
+        <td style="padding:10px;width:70%;vertical-align:top">
+          <papertitle>Selfee: Iterative self-revising llm empowered by self-feedback generation</papertitle>
+          <br>
+          <a href="https://seonghyeonye.github.io/" target="_blank">Seonghyeon Ye*</a>, 
+          <a href="https://dreamgonfly.github.io/" target="_blank">Yongrae Jo*</a>, 
+          <strong>Doyoung Kim*</strong>, 
+          <a href="https://sungdongkim.github.io/" target="_blank">Sungdong Kim</a>, 
+          <a href="https://hbin0701.github.io/" target="_blank">Hyeonbin Hwang</a>, 
+          <a href="https://seominjoon.github.io/" target="_blank">Minjoon Seo</a>
+          <br>
+          <br>
+          <a href="https://kaistai.github.io/SelFee/" target="_blank">[blog]</a>
+          <p></p>
+
+        </td>
+      <tr></tr>
+
+      </tbody></table>
+
+
+    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr>
+        <td style="padding:0px">
+          <br>
+          <p style="text-align:right;font-size:small;">
+            Website design from <a href="https://github.com/jonbarron/jonbarron_website" target="_blank">Jon Barron</a>
+          </p>
+        </td>
+      </tr>
+    </tbody></table>
+</body>
+
+</html>
