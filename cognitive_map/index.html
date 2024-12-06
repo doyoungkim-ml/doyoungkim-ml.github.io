@@ -169,7 +169,40 @@
           <li><strong>Complexity class and computational limitations:</strong> Gridworld has a complexity class outside <span> `TC^0`</span>, so a fixed-precision transformer can't solve it<sup>[6]</sup></li>
         </ol>
       </div>
+      <p>
+        To measure true extrapolability of language models, we designed a rigorous experimental setup:
+      </p>
+        
+      <div class="key-insight">
+        <ul>
+          <li><strong>Training Environment:</strong> Limited to 10x10 grids maximum</li>
+          <li><strong>Testing Environment:</strong> Extended to 20x20 grids maximum</li>
+          <li><strong>Key Challenge:</strong> Evaluating extrapolation beyond training distribution</li>
+        </ul>
+      </div>
 
+      <p>
+        Our test set features significantly longer input tokens and higher environmental complexity compared 
+        to the training set, allowing us to evaluate true extrapolation capabilities.
+      </p>
+
+      <div class="columns">
+        <div class="column">
+          <img src="materials/train_test.png" alt="Training vs Testing Statistics">
+          <p class="caption"></p>
+        <b>Heatmaps and Statistics of Train/Test set:</b>  Heatmap of (a, b) shows average input token length and complexity for different 
+        Gridworld sizes axb. The red box in the test set heatmap indicates the training set boundaries.
+          </p>
+        </div>
+      </div>
+      
+      <p>
+        We observe clear differences between training and testing environments in both input length and 
+        complexity (measured by the negative log probability of successfully completing an optimal path using a 
+        random policy). Our hypothesis is that models equipped with cognitive map-like reasoning should be able 
+        to effectively handle test cases outside the training distribution (shown in red box) by leveraging their 
+        systematic planning capabilities.
+      </p>
       <div class="columns">
         <div class="column">
           <img src="materials/optimal_reachable_analysis.png" alt="Planning Scenarios">
@@ -179,12 +212,13 @@
         </div>
       </div>
       <p>
-        We see two types of planning scenarios in Gridworld: optimal planning and reachable planning. Optimal planning involves finding the shortest path to the goal, while reachable planning allows for multiple steps to reach the goal. The key difference lies in the complexity of the planning task and the need for offline planning before actual interaction.
+        We test two types of planning scenarios in Gridworld: optimal planning and reachable planning. Optimal planning involves finding the shortest path to the goal, while reachable planning allows for multiple steps to reach the goal. The key difference lies in the complexity of the planning task and the need for offline planning before actual interaction. Optimal planning requires a comprehensive mental model of the environment, akin to cognitive maps, to find the shortest path efficiently.
       </p>
 
-      <h2 class="title is-3">Cognitive Maps: A Bridge to Better Extrapolation</h2>
+
+      <h2 class="title is-3">Cognitive Maps for Path Planning</h2>
       <p>
-        Our research introduces a novel approach to enhance language models' extrapolation capabilities through cognitive maps. This approach is inspired by neuroscientific research on how humans represent and navigate spatial environments <sup>[4]</sup>. The cognitive map framework consists of three key components:
+        Our configuration of the cognitive map framework consists of three stages: sampling, propagation, and backtracking, enabling the model to construct a comprehensive mental representation and generate optimal solutions without external interaction. We demonstrate that this configuration of CoT shows significant extrapolation capabilities. 
       </p>
       
       <div class="columns">
@@ -280,6 +314,11 @@ intriguing insights that extend beyond extrapolation. Here are some key findings
       </div>
 
       <h3 class="title is-4">Comparison with Exploration-based Methods</h3>
+      <p>
+        Apart from offline planning with cognitive maps, there are numerous exploration strategies for language models, including Tree of Thoughts
+    (ToT)<sup>[7]</sup>, which combines language model sampling with value estimation for tree
+    search. We compared cognitive map approaches with exploration-based methods like DFS (Depth-First Search) where language models explore and traverse the environment iteratively until reaching the goal.
+      </p>
       <div class="columns">
         <div class="column">
           <img src="materials/exploration_comparison.png" alt="Exploration-based Planning Comparison">
@@ -305,6 +344,10 @@ intriguing insights that extend beyond extrapolation. Here are some key findings
           </div>
         </div>
       </div>
+
+      <p>
+        Each approach has its own tradeoffs. While offline planning using cognitive maps requires building a robust mental model upfront and can achieve more optimal paths, it demands significant computational resources for comprehensive planning. In contrast, online exploration is more flexible and requires less initial computation, making it easier to implement since it doesn't need a complete world model. However, this comes at the cost of requiring more interactions with the environment and potentially leading to less optimal paths. This mirrors human decision-making, where we sometimes prefer quick, adaptive solutions over carefully planned optimal routes.
+      </p>
     </div>
   </div>
 </section>
@@ -344,7 +387,8 @@ intriguing insights that extend beyond extrapolation. Here are some key findings
 
         <p class="reference">[5] John O’Keefe and Lynn Nadel. The Hippocampus as a Cognitive Map. Oxford: Clarendon Press, 1978.</p>
         <p class="reference">[6] William Merrill and Ashish Sabharwal. The parallelism tradeoff: Limitations of log-precision transformers, 2023. </p>
-
+        <p class="reference">[7] Shunyu Yao, Dian Yu, Jeffrey Zhao, Izhak Shafran, Thomas L. Griffiths, Yuan Cao, and Karthik
+          Narasimhan. Tree of thoughts: Deliberate problem solving with large language models, 2023.</p>
       </div>
 
 
