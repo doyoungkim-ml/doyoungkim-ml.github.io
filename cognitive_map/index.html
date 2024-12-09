@@ -216,9 +216,9 @@
       </p>
 
 
-      <h2 class="title is-3">Cognitive Maps for Path Planning</h2>
+      <h2 class="title is-3">Cognitive Maps for Path Planning: Planning with World Model through CoT</h2>
       <p>
-        Our configuration of the cognitive map framework consists of three stages: sampling, propagation, and backtracking, enabling the model to construct a comprehensive mental representation and generate optimal solutions without external interaction. We demonstrate that this configuration of CoT shows significant extrapolation capabilities. 
+        The cognitive map framework operates through three integrated stages: sampling, propagation, and backtracking. This architecture enables language models to simultaneously <b>1) build robust world model of novel environments </b> and <b>2) perform model-based planning</b> through CoT reasoning. At the sampling stage, the model extracts key environmental features and relationships. During propagation, it extends these initial observations into a broader cognitive map. The backtracking stage then leverages this representation to identify optimal solutions by evaluating potential paths and their outcomes. Our experiments demonstrate that this approach significantly enhances the model's ability to extrapolate beyond its training data, generating effective solutions for previously unseen scenarios without requiring external feedback or interaction.
       </p>
       
       <div class="columns">
