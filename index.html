@@ -9,6 +9,30 @@
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
 	<link rel="icon" href="favicon.ico">
   <script type="text/javascript" src="script.js"></script>
+  <style>
+    .tag {
+      display: inline-block;
+      padding: 2px 8px;
+      margin: 2px 3px 2px 0;
+      font-size: 11px;
+      font-weight: 500;
+      border-radius: 12px;
+      border: 1px solid transparent;
+    }
+    .tag-container {
+      margin-top: 8px;
+    }
+    /* Tag color variants */
+    .tag-llms { background-color: #e3f2fd; color: #1565c0; border-color: #90caf9; }
+    .tag-reasoning { background-color: #f3e5f5; color: #7b1fa2; border-color: #ce93d8; }
+    .tag-rl { background-color: #fff3e0; color: #e65100; border-color: #ffcc80; }
+    .tag-retrieval { background-color: #e8f5e9; color: #2e7d32; border-color: #a5d6a7; }
+    .tag-evaluation { background-color: #fce4ec; color: #c2185b; border-color: #f48fb1; }
+    .tag-learning { background-color: #e0f7fa; color: #00838f; border-color: #80deea; }
+    .tag-generalization { background-color: #fff8e1; color: #f9a825; border-color: #ffe082; }
+    .tag-alignment { background-color: #ede7f6; color: #512da8; border-color: #b39ddb; }
+    .tag-other { background-color: #f5f5f5; color: #616161; border-color: #e0e0e0; }
+  </style>
 </head>
 
 <body onload="startGame()">
@@ -27,13 +51,6 @@
               <p>
                 <i>I am currently interested in understanding and improving agentic capabilities of (large) neural networks in language and robotics fields, including reasoning, planning, and test-time adaptation.</i>
               </p>
-              <!-- <p>
-                Despite the massive corpus of data on which modern AI systems are trained, they still struggle with tasks that humans, even young children, can easily perform. I believe that by incorporating key aspects of human cognitive processes, we can create AI systems capable of robust decision-making. My research focuses on narrowing the gap between human and artificial intelligence in complex scenarios. Specifically, I aim to tackle two key challenges:
-                <ul>
-                    <li><b>Extrapolability:</b> Humans effortlessly generalize knowledge from simple scenarios to navigate complex situations. How can we develop AI agents that, after learning from a few simple demonstrations, can extrapolate to more complex scenarios?</li>
-                    <li><b>Semiparametric generation:</b> Unlike purely parametric systems, humans rely on both learned patterns and direct interactions with memory, tools, and the physical world. Can we design AI systems that similarly combine internal models with external information sources in a cohesive semiparametric framework?</li>
-                </ul>
-              </p> -->
               <p style="text-align:center">
                 <a href="mailto:doyoungkim@nyu.edu">Email</a> &nbsp/&nbsp
                 <a href="https://scholar.google.com/citations?user=PJR9ogMAAAAJ" target="_blank">Google Scholar</a> &nbsp/&nbsp
@@ -48,19 +65,6 @@
             </td>
           </tr>
         </tbody></table>
-<!-- 
-        <table style="padding-bottom:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tbody>
-            <tr>
-              <td style="padding:20px;width:100%;vertical-align:middle">
-                <heading>News</heading>
-                <ul>
-                  <li>[Feb 2024] Paper accepted to ICLR 2024</li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table> -->
 
         <table style="padding-bottom:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
@@ -79,6 +83,34 @@
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           
+          <!-- TSLM Paper (NEW) -->
+          <tr>
+            <td style="width:30%;vertical-align:top">
+              <div class="one">
+                <img src='images/tslm.png' style="width:100%;height:50%;">
+              </div>
+            </td>
+
+            <td style="width:70%;vertical-align:top">
+              <papertitle>TSLM: Tree Structured Language Modeling for Divergent Thinking</papertitle>
+              <br>
+              <strong>Doyoung Kim*</strong>, 
+              <a href="https://www.linkedin.com/in/jaehyeok-doo-5768a5231/" target="_blank">Jaehyeok Doo*</a>, 
+              <a href="https://seominjoon.github.io/" target="_blank">Minjoon Seo</a>
+              <br>
+              <em>ICLR 2026</em>
+              <br>
+							<a href="https://arxiv.org/abs/2601.22688" target="_blank">[paper]</a>
+              <p></p>
+              <p> We propose Tree Structured Language Modeling (TSLM), a new paradigm that enables language models to generate complete search trees using special tokens rather than sequential reasoning. TSLM achieves efficient inference-time scaling by producing divergent reasoning paths in a single forward pass.
+              </p>
+              <div class="tag-container">
+                <span class="tag tag-llms">LLMs</span>
+                <span class="tag tag-reasoning">Reasoning</span>
+              </div>
+            </td>
+          </tr>
+
           <tr>
             <td style="width:30%;vertical-align:top">
               <div class="one">
@@ -101,6 +133,11 @@
               <p></p>
               <p> While humans can learn complex reasoning from few examples, AI struggles to generalize beyond its training. We enable language models to generate "cognitive maps" - tree-structured expansions of future states - before planning. In maze-solving tasks, this cognitive mapping approach proves to be the only effective method for helping language models extrapolate their planning abilities to larger, unseen mazes.
               </p>
+              <div class="tag-container">
+                <span class="tag tag-llms">LLMs</span>
+                <span class="tag tag-generalization">Generalization</span>
+                <span class="tag tag-reasoning">Reasoning</span>
+              </div>
             </td>
           </tr>
 
@@ -126,6 +163,11 @@
               <p></p>
               <p> We propose a self-training method that helps LLMs identify their first incorrect reasoning step ("pit") and use it as a reward signal. Through preference optimization, this method enables LLMs to improve their reasoning process, leading to enhanced mathematical performance.
               </p>
+              <div class="tag-container">
+                <span class="tag tag-llms">LLMs</span>
+                <span class="tag tag-reasoning">Reasoning</span>
+                <span class="tag tag-rl">Reinforcement Learning</span>
+              </div>
             </td>
           </tr>
 
@@ -153,6 +195,11 @@
               <p></p>
               <p> We introduce a semiparametric model superposing two embedding spaces: parametric token embeddings and nonparametric sequence embeddings. The model is co-trained using weighted cross-entropy loss for language modeling and InfoNCE loss for sequence retrieval to enable generation with citations.
               </p>
+              <div class="tag-container">
+                <span class="tag tag-llms">LLMs</span>
+                <span class="tag tag-retrieval">Retrieval</span>
+                <span class="tag tag-learning">Representation Learning</span>
+              </div>
             </td>
           </tr>
 
@@ -181,6 +228,11 @@
               <p>
                 We propose a fine-grained evaluation framework for generative language models based on 12 alignment skill sets, which show a strong correlation between model-based and human-based evaluations.
               </p>
+              <div class="tag-container">
+                <span class="tag tag-llms">LLMs</span>
+                <span class="tag tag-evaluation">Evaluation</span>
+                <span class="tag tag-alignment">Alignment</span>
+              </div>
             </td>
           </tr>
 
@@ -209,6 +261,11 @@
               <p>
                 We introduce a new instruction-tuning dataset called the COT COLLECTION dataset, containing 1.84 million rationales across 1,060 tasks. These rationales were extracted from the FLAN Collection using OpenAI Codex with in-context learning (ICL). We fine-tune Flan-T5 (3B & 11B) with the COT COLLECTION to show both zero-shot and few-shot improvements.
               </p>
+              <div class="tag-container">
+                <span class="tag tag-llms">LLMs</span>
+                <span class="tag tag-reasoning">Reasoning</span>
+                <span class="tag tag-learning">Few-shot Learning</span>
+              </div>
             </td>
           </tr>
 
@@ -251,6 +308,11 @@
                     <br>
                     <a href="https://arxiv.org/abs/2311.09069" target="_blank">[paper]</a>
                     <p></p>
+                    <div class="tag-container">
+                      <span class="tag tag-llms">LLMs</span>
+                      <span class="tag tag-alignment">Trustworthy</span>
+                      <span class="tag tag-evaluation">Evaluation</span>
+                    </div>
                   </td>
                 </tr>
                 <tr>
@@ -276,6 +338,11 @@
                     <br>
                     <a href="https://arxiv.org/abs/2302.03202" target="_blank">[paper]</a>
                     <p></p>
+                    <div class="tag-container">
+                      <span class="tag tag-llms">LLMs</span>
+                      <span class="tag tag-other">Task vector</span>
+                      <span class="tag tag-other">Expert Models</span>
+                    </div>
                   </td>
                 </tr>
 
@@ -299,6 +366,10 @@
                     <br>
                     <a href="https://arxiv.org/abs/2210.02969" target="_blank">[paper]</a>
                     <p></p>
+                    <div class="tag-container">
+                      <span class="tag tag-llms">LLMs</span>
+                      <span class="tag tag-learning">Zero-shot Learning</span>
+                    </div>
                   </td>
                 </tr>
 
@@ -323,6 +394,11 @@
                     <br>
                     <a href="https://openreview.net/forum?id=UFtd8aGZCP" target="_blank">[paper]</a>
                     <p></p>
+                    <div class="tag-container">
+                      <span class="tag tag-llms">LLMs</span>
+                      <span class="tag tag-retrieval">Retrieval</span>
+                      <span class="tag tag-other">Task vector</span>
+                    </div>
                   </td>
                 </tr>
 
@@ -370,7 +446,10 @@
           <br>
           <a href="https://kaistai.github.io/SelFee/" target="_blank">[blog]</a>
           <p></p>
-
+          <div class="tag-container">
+            <span class="tag tag-llms">LLMs</span>
+            <span class="tag tag-rl">Self-Improvement</span>
+          </div>
         </td>
       <tr></tr>
 
